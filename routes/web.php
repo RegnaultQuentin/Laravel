@@ -13,10 +13,22 @@
 
 ## URL
 Route::get('/', function () {
-    return view('toto');
+    return view('welcome');
 });
 Route::get('presentation', function () {
     return view('presentation');
+});
+
+Route::get('admin', function () {
+    return view('admin');
+});
+
+Route::get('alo', function () {
+    return view('alo');
+});
+
+Route::get('toto', function () {
+    return view('toto');
 });
 
 ## Route
