@@ -19,17 +19,12 @@ Route::get('presentation', function () {
     return view('presentation');
 });
 
-Route::get('admin', function () {
-    return view('admin');
-});
+Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('alo', function () {
-    return view('alo');
-});
 
-Route::get('toto', function () {
-    return view('toto');
-});
+Route::get('/admin', 'AdministratorController@index')->middleware("auth", "role:Administrateur");
+Route::get('/moderator', 'ModeratorController@index')->middleware("auth", "role:Modérateur");
+Route::get('/user', 'UserController@index')->middleware("auth", "role:Utilisateur");
 
 ## Route
 Route::get('/contact', function () {
@@ -38,3 +33,6 @@ Route::get('/contact', function () {
 Route::get('/autre', function () {
     return view('autre');
 })->name('autre');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

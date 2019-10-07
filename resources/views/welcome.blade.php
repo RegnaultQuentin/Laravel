@@ -89,6 +89,9 @@
                     <a href="{{ url('presentation') }}">Présentation</a>
                     <a href="{{ route('contact') }}">Contact</a>
                     <a href="{{ route('autre') }}">Autres</a>
+                    <a href="{{ url('admin') }}">Admin</a>
+                    <a href="{{ url('moderator') }}">Modo</a>
+                    <a href="{{ url('user') }}">Utilisateur</a>
                 </div>
             </div>
         </div>
